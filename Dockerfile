@@ -1,23 +1,23 @@
-# 使用官方的 Golang 镜像作为基础镜像
+# 使用官方
 FROM golang:1.21-alpine
 
-# 设置工作目录
+# 設定工作目錄
 WORKDIR /app
 
-# 将当前目录下的 go.mod 和 go.sum 文件（如果存在）复制到容器的工作目录
+# 複製當前的go 相關檔案
 COPY go.mod go.sum* ./
 
-# 下载依赖
+# 安裝依賴
 RUN go mod download
 
-# 将源代码复制到容器中
+# 將檔案複製到容器內
 COPY run.go .
 COPY config.json .
 
-# 编译应用
+# 編譯使用
 RUN go build -o main run.go
 
 EXPOSE 8080
 
-# 运行应用
+# 開始運行
 CMD ["./main"]
