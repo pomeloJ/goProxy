@@ -3,6 +3,9 @@ Docker 也是使用 8080 port
 
 正式部屬到docker時儘量避開 8080，比較好做開發測試
 
+## git clone 後
+go mod init <module_name>
+
 ## Docker build
 docker build -t go-proxy .
 
