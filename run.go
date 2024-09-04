@@ -100,6 +100,10 @@ func main() {
 
                 // 構建最終的轉發 URL
                 finalURL := config.TargetURL + r.URL.Path
+                if r.URL.RawQuery != "" {
+                finalURL += "?" + r.URL.RawQuery
+                }
+
                 log.Printf("Forwarding to URL: %s", finalURL)
 
                 // 建立新的請求以轉發
