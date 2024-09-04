@@ -1,0 +1,42 @@
+# 編譯輸出目錄
+/bin/
+/out/
+
+# Go 构建產生的可執行檔案
+*.exe
+*.out
+*.app
+
+# 編譯過程中產生的臨時檔案
+*.log
+*.tmp
+
+# 編譯輸出檔案
+*.o
+*.a
+*.so
+
+# 依賴項目目錄
+/vendor/
+
+# 包含模組版本的檔案
+/go.sum
+/go.mod
+
+# IDE 專案設定檔案
+.idea/
+.vscode/
+
+# 操作系統產生的檔案
+.DS_Store
+Thumbs.db
+
+# 套件管理產生的檔案
+node_modules/
+
+# 測試覆蓋率報告
+*.cover
+*.coverprofile
+coverage.out
+
+config.json

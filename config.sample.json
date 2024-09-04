@@ -1,0 +1,8 @@
+{
+    "target_url": "http://ip:port",
+    "elasticsearch_url": "http://ip:9200",
+    "elasticsearch_username": "user",
+    "elasticsearch_password": "password",
+    "elasticsearch_index": "api-logs",
+    "listen_port": "8080"
+}
