@@ -124,7 +124,11 @@ func main() {
                         }
                 }
 
-                client := &http.Client{}
+                client := &http.Client{
+		    CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse // 不自動跟隨
+		    },
+		}
                 resp, err := client.Do(req)
                 if err != nil {
                         log.Printf("Failed to forward request: %v", err)
